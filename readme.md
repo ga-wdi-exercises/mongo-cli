@@ -1,6 +1,6 @@
 # Build a CLI Mongo App w/ Node
 
-_**Note**_ This exercise assumes a restaurant_db was created in the [mongo intro lesson.](https://github.com/ga-wdi-lessons/mongo-intro/)
+_**Note**_ This exercise assumes a `restaurant_db` was created in the [mongo intro lesson.](https://github.com/ga-wdi-lessons/mongo-intro/)
 
 Your task is to connect to the `restaurant_db` via the `mongodb` node module and
 build a little CLI app that will allow a user to enter commands to query our
@@ -8,8 +8,9 @@ database.
 
 ## Setup:
 
-Start by creating a main `js` file.
-Then install the `mongodb` node module
+Start by:
+1. forking and cloning this exercise
+2. creating a main `js` file, and installing the `mongodb` node module:
 
 ```bash
 $ touch app.js
@@ -17,7 +18,7 @@ $ npm init
 $ npm install --save mongodb
 ```
 
-Great, now use an instance of the MongoClient to connect to the `restaurant_db` and search for all restaurants
+Great, now use an instance of the MongoClient to connect to the `restaurant_db` and search for all restaurants:
 
 ```js
 // app.js
@@ -38,7 +39,7 @@ If you see all the documents outputed to your server logs, you're in great shape
 
 Now, add in the functionality to prompt the user for some input. To do that, we
 are going to use a node module that will allow us to use the `prompt` method,
-much like how we used it w/ front-end JS in the browser.
+much like how we used it w/ front-end JS in the browser:
 
 ```
 $ npm install --save prompt-sync
