@@ -1,6 +1,7 @@
 # Build a CLI Mongo App w/ Node
 
-_**Note**_ This exercise assumes a `restaurant_db` was created in the [mongo intro lesson.](https://github.com/ga-wdi-lessons/mongo-intro/)
+_**Note**_ This exercise assumes a `restaurant_db` was created in during the [mongo intro lesson.](https://github.com/ga-wdi-lessons/mongo-intro/)
+If you need are doing this exercise independent of the lesson and need seed data follow the additional setup from [this file.](./seeds.md)
 
 Your task is to connect to the `restaurant_db` via the `mongodb` node module and
 build a little CLI app that will allow a user to enter commands to query our
@@ -52,6 +53,7 @@ if the user enters in the right input:
 // app.js
 
 var mongo = require("mongodb").MongoClient
+var prompt = require("prompt-sync")()
 var url = "mongodb://localhost:27017/test"
 
 mongo.connect(url, function(err, db){
