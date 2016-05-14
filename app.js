@@ -9,14 +9,14 @@ mongo.connect(url, function(err, db){
     collection.find().toArray(function(err, doc){
         console.log(doc.length);
         for (var i=0; i<doc.length; ++i){
-            console.log(doc[i].name);
+            console.log((i+1) + " " + doc[i].name);
         }
     })
   }
     else if(number == "2"){
       var name = prompt("Enter the restaurant's name to see more info: ")
-      collection.find(name).toArray(function(err, doc){
-        console.log(doc);
+      collection.find(name).toArray(function(err, name){
+        console.log(name);
       });
     };
 
