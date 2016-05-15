@@ -5,9 +5,10 @@ var prompt = require("prompt-sync")()
 mongo.connect(url, function(err, db){
   var collection = db.collection('restaurants');
   var number = prompt("Type 1 and press enter to display all restaurants' names: ")
-  if(number == "1"){
-    collection.find().toArray(function(err, doc){
-      console.log(doc)
-    })
+  collection.find().forEach(function(u) {
+    var result = [];
+    result.push(u.name)
+    console.log(result)
+  })
   }
-})
+)
