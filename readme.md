@@ -35,7 +35,7 @@ mongo.connect(url, function(err, db){
 })
 ```
 
-If you see all the documents outputed to your server logs, you're in great shape!
+Test this code by running the file in node `$ node app.js`: if you see all the documents outputed to your server logs, you're in great shape!
 > If not, double check your connection url and that your database is in fact there and populated!
 
 Now, add in the functionality to prompt the user for some input. To do that, we
@@ -54,7 +54,7 @@ if the user enters in the right input:
 
 var mongo = require("mongodb").MongoClient
 var prompt = require("prompt-sync")()
-var url = "mongodb://localhost:27017/test"
+var url = "mongodb://localhost:27017/restaurant_db"
 
 mongo.connect(url, function(err, db){
   var collection = db.collection('restaurants');
