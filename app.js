@@ -16,8 +16,13 @@ mongo.connect(url, function(err, db){
 
 mongo.connect(url, function(err, db){
   var collection = db.collection('restaurants');
-  var display = prompt("Type the name of a restaurant to view more info ")
-  if(display == "Cookies Corner"){
-    console.log(collection.find({name: "Cookies Corner"}))
-  }
+  var display = prompt("Type the name of a restaurant to view more info: ")
+  if(display){
+    collection.find({name: display}).forEach(function(u){
+      var result = []
+      result.push(u)
+      console.log(result)
+
+    })
+  };
 })
