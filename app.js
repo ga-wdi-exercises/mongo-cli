@@ -8,7 +8,7 @@ mongo.connect(url, function(err, db){
   var number = prompt("Type 1 to view all restaurants or 2 to view Yelp: ")
   if(number == "1"){
     collection.find().toArray(function(err, doc){
-      console.log(err);
+      console.log(doc);
     });
   }else if(number == "2"){
     collection.find().toArray(function(err, doc){
