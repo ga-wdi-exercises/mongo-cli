@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/wesareed/mongo-cli#readme",
   "dependencies": {
-    "mongodb": "^2.1.18"
+    "mongodb": "^2.1.18",
+    "prompt-sync": "^4.0.4"
   }
 }
