@@ -15,8 +15,8 @@ Start by:
 
 ```bash
 $ touch app.js
-$ npm init
-$ npm install --save mongodb
+$ npm init -y
+$ npm install mongodb
 ```
 
 Great, now use an instance of the MongoClient to connect to the `restaurant_db` and search for all restaurants:
