@@ -57,6 +57,7 @@ var prompt = require("prompt-sync")()
 var url = "mongodb://localhost:27017/restaurant_db"
 
 mongo.connect(url, function(err, db){
+  var db = database.db('restaurant_db')
   var collection = db.collection('restaurants');
   var number = prompt("Type 1 and press enter to display all restaurants' names: ")
   if(number == "1"){
